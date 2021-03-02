@@ -48,7 +48,8 @@ namespace Hammer
                     {
                         while (true)
                         {
-                            var damage = GetAstral().GetCalculatedDamage(target);
+                            var caster = args.Modifier.Caster as Hero;
+                            var damage = GetAstral(caster ?? Me).GetCalculatedDamage(target);
 
                             var modifier =
                                 target.GetModifierByName(
@@ -78,9 +79,9 @@ namespace Hammer
             };
         }
 
-        private Ability GetAstral()
+        private static Ability GetAstral(Hero hero)
         {
-            return Me.GetAbilityById(AbilityId.obsidian_destroyer_astral_imprisonment);
+            return hero.GetAbilityById(AbilityId.obsidian_destroyer_astral_imprisonment);
         }
     }
 }
