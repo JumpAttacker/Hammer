@@ -41,7 +41,7 @@ namespace Hammer
                 if (name != "modifier_obsidian_destroyer_astral_imprisonment_prison") return;
                 var meteor = Me.Inventory.GetItemsById(AbilityId.item_meteor_hammer).FirstOrDefault();
                 if (meteor == null) return;
-                var target = (Hero) args.Modifier.Owner;
+                var target = args.Modifier.Owner as Hero;
                 var leftTime = args.Modifier.RemainingTime;
                 if (leftTime >= 2.95f && target != null)
                     UpdateManager.BeginInvoke(10, async () =>
