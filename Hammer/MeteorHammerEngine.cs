@@ -43,7 +43,7 @@ namespace Hammer
                 if (meteor == null) return;
                 var target = args.Modifier.Owner as Hero;
                 var leftTime = args.Modifier.RemainingTime;
-                if (leftTime >= 2.95f && target != null)
+                if (leftTime >= 2.95f && target != null && target.Team != Me.Team)
                     UpdateManager.BeginInvoke(10, async () =>
                     {
                         while (true)
