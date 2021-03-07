@@ -27,7 +27,6 @@ namespace Hammer
 
         private MenuSwitcher DontUseIfDie { get; }
 
-
         public void Start()
         {
             UpdateManager.CreateGameUpdate(500, () => { });
