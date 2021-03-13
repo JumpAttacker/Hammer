@@ -67,7 +67,11 @@ namespace Hammer
                             var remaining = modifier.RemainingTime + GameManager.Ping / 1000 + ExtraTiming.Value;
                             if (remaining <= 2.95 && remaining >= 2.5f)
                             {
-                                if (meteor.CanBeCastedOnTarget(target)) continue;
+                                if (meteor.CanBeCastedOnTarget(target))
+                                {
+                                    await Task.Delay(10);
+                                    continue;
+                                }
                                 meteor.Cast(target.Position);
                                 break;
                             }
