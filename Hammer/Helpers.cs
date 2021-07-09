@@ -1,6 +1,9 @@
 ﻿using System.Linq;
-using Divine;
-using Divine.SDK.Extensions;
+
+using Divine.Entity.Entities.Abilities;
+using Divine.Entity.Entities.Units;
+using Divine.Entity.Entities.Units.Heroes;
+using Divine.Extensions;
 
 namespace Hammer
 {

@@ -1,9 +1,15 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Divine;
+
+using Divine.Entity;
+using Divine.Entity.Entities.Abilities;
+using Divine.Entity.Entities.Abilities.Components;
+using Divine.Entity.Entities.Units.Heroes;
+using Divine.Extensions;
+using Divine.Game;
 using Divine.Menu.Items;
-using Divine.SDK.Extensions;
+using Divine.Modifier;
+using Divine.Update;
 
 namespace Hammer
 {

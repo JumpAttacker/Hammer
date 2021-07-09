@@ -1,6 +1,6 @@
-﻿using Divine;
-using Divine.Menu;
+﻿using Divine.Menu;
 using Divine.Menu.Items;
+using Divine.Service;
 
 namespace Hammer
 {
